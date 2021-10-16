@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Share } from 'react-native';
 import { NativeBaseProvider, Center, Box, Heading, VStack, Input } from 'native-base';
 import QRCode from 'react-native-qrcode-svg';
-import Share from 'react-native-share';
 
 export default function App() {
   let svgRef;
@@ -11,7 +10,7 @@ export default function App() {
 
   const onPress = () => {
     svgRef.toDataURL((dataURL) => {
-      Share.open({
+      Share.share({
         message: `${code}`,
         url: `data:image/png;base64,${dataURL}`,
       });
