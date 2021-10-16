@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "qr-code",
+    "name": "QR Code",
     "slug": "qr-code",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -30,6 +30,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "QR Code Generator"
   }
 }

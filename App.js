@@ -5,16 +5,17 @@ import QRCode from "react-qr-code";
 
 export default function App() {
   const [code, onInputChange] = useState('');
+  
   return (
     <View style={styles.container}>
-      <QRCode 
-        value={code || 'www.exmaple.com'} 
-      />
       <TextInput
         style={styles.input}
         onChangeText={onInputChange}
         placeholder="www.exmaple.com"
         value={code}
+      />
+      <QRCode 
+        value={code || 'www.exmaple.com'} 
       />
       <StatusBar style="auto" />
     </View>
