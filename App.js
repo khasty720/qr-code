@@ -19,7 +19,7 @@ export default function App() {
   
   return (
     <NativeBaseProvider>
-      <Center flex={1}>
+      <Center mt="20%">
         <Box>
           <Heading mb="3">QR Code Generator</Heading>
           <VStack space={2} mb="3">
@@ -38,6 +38,7 @@ export default function App() {
               <QRCode 
                 value={code || 'www.exmaple.com'}
                 getRef={(r) => (svgRef = r)}
+                size={250}
               />
             </TouchableOpacity>
           </VStack>
